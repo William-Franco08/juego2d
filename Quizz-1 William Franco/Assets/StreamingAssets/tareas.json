@@ -1,0 +1,16 @@
+{
+  "tareas": [
+    { "id": 1, "titulo": "Estudiar JSON", "prioridad": 2 },
+    { "id": 2, "titulo": "Practicar pilas", "prioridad": 1 },
+    { "id": 3, "titulo": "Leer documentación de Unity", "prioridad": 3 },
+    { "id": 4, "titulo": "Hacer pruebas de lectura de archivos", "prioridad": 2 },
+    { "id": 5, "titulo": "Crear clase serializable", "prioridad": 1 },
+    { "id": 6, "titulo": "Depurar errores de parseo", "prioridad": 2 },
+    { "id": 7, "titulo": "Implementar Dictionary por id", "prioridad": 3 },
+    { "id": 8, "titulo": "Mostrar lista en UI (TextMeshPro)", "prioridad": 2 },
+    { "id": 9, "titulo": "Validar archivo existe", "prioridad": 1 },
+    { "id": 10, "titulo": "Crear archivo de salida", "prioridad": 3 },
+    { "id": 11, "titulo": "Contar prioridades atendidas", "prioridad": 1 },
+    { "id": 12, "titulo": "Generar reporte final", "prioridad": 2 }
+  ]
+}

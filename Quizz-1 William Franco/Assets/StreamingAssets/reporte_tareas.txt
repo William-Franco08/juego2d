@@ -1,0 +1,4 @@
+Prioridad 1: 4
+Prioridad 2: 5
+Prioridad 3: 3
+Total: 12
