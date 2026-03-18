@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 134180353}
-  - component: {fileID: 134180352}
+  - component: {fileID: 134180354}
   m_Layer: 0
   m_Name: ---Timer---
   m_TagString: Untagged
@@ -136,18 +136,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &134180352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 134180351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99c36ab24e832634caa9b141ded19f5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &134180353
 Transform:
   m_ObjectHideFlags: 0
@@ -163,6 +151,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &134180354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134180351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c36ab24e832634caa9b141ded19f5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Timer
 --- !u!1 &648419842
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,7 +647,6 @@ MonoBehaviour:
   m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
-  m_Version: 2
   m_TaaSettings:
     m_Quality: 3
     m_FrameInfluence: 0.1
@@ -655,6 +654,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1 &1877085604
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,7 +728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b7410a08183d3e408c9ed316511abfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tiempojuego: {fileID: 134180352}
+  Tiempojuego: {fileID: 134180354}
 --- !u!4 &1898996772
 Transform:
   m_ObjectHideFlags: 0
@@ -827,7 +827,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 134180352}
+      - m_Target: {fileID: 134180354}
         m_TargetAssemblyTypeName: Timer, Assembly-CSharp
         m_MethodName: TimerStop
         m_Mode: 1
@@ -919,7 +919,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2040686770
 RectTransform:
   m_ObjectHideFlags: 0
@@ -984,7 +984,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 134180352}
+      - m_Target: {fileID: 134180354}
         m_TargetAssemblyTypeName: Timer, Assembly-CSharp
         m_MethodName: TimerStart
         m_Mode: 1

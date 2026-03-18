@@ -28,10 +28,10 @@ public class Timer : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //TimerReset();
+        
     }
-
     public void TimerStart()
+
     {
         if (!isRunning)
         {

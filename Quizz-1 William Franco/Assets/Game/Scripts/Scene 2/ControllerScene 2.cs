@@ -7,6 +7,7 @@ public class ControllerScene2 : MonoBehaviour
     void Start()
     {
         ShowGlobalTime();
+        Tiempojuego.TimerStart();
     }
 
     // Update is called once per frame
