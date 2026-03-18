@@ -3,19 +3,23 @@ using UnityEngine;
 public class ControllerScene1 : MonoBehaviour
 {
     public Timer Tiempojuego;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private float startTime;
+
     void Start()
     {
-        
+        if (Tiempojuego != null)
+        {
+            startTime = Time.time;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnDestroy()
     {
-        
-    }
-    public void GetTimeScene()
-    {
-        GameManager.Instance.TotalTime(Tiempojuego.StopTime);
+        if (GameManager.Instance != null)
+        {
+            float tiempoEscena = Time.time - startTime; 
+            GameManager.Instance.TotalTime(tiempoEscena);
+        }
     }
 }

@@ -48,7 +48,7 @@ public class Timer : MonoBehaviour
             print("STOP");
             isRunning = false;
             stopTime = timerTime;
-            Debug.Log("Tiempo de juego" + stopTime.ToString());
+            Debug.Log("Tiempo de juego: " + stopTime.ToString("F2") + " segundos");
             ///
             //if (stopTime >= 30)
             //{

@@ -2,24 +2,22 @@ using UnityEngine;
 
 public class ControllerScene2 : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Timer Tiempojuego;
+
     void Start()
     {
-        ShowGlobalTime();
+        if (Tiempojuego != null)
+        {
+            Tiempojuego.TimerStart();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnDestroy()
     {
-        
-    }
-    public void ShowGlobalTime()
-    {
-        Debug.Log("Tiempo total: " + GameManager.Instance.GlobalTime);
-    }
-    public void GetTimeScene()
-    {
-        GameManager.Instance.TotalTime(Tiempojuego.StopTime);
+        if (GameManager.Instance != null && Tiempojuego != null)
+        {
+            Tiempojuego.TimerStop();
+            GameManager.Instance.TotalTime(Tiempojuego.StopTime);
+        }
     }
 }
