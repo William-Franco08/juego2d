@@ -7,10 +7,10 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     #region sonidos
-    //[SerializeField]
-    //private AudioClip stop;
-    //[SerializeField]
-    //private AudioSource respuestaAudio;
+    [SerializeField]
+    private AudioClip stop;
+    [SerializeField]
+    private AudioSource respuestaAudio;
     //Reloj objReloj;
     #endregion
 
@@ -28,10 +28,10 @@ public class Timer : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
+        //TimerReset();
     }
-    public void TimerStart()
 
+    public void TimerStart()
     {
         if (!isRunning)
         {
@@ -52,9 +52,9 @@ public class Timer : MonoBehaviour
             ///
             //if (stopTime >= 30)
             //{
-            //respuestaAudio.clip = stop;
-            //respuestaAudio.Play();
-            // }
+                //respuestaAudio.clip = stop;
+                //respuestaAudio.Play();
+            //}
 
         }
     }
@@ -75,11 +75,11 @@ public class Timer : MonoBehaviour
         int secondsInt = (int)timerTime % 60;
         int seconds100Int = (int)(Mathf.Floor((timerTime - (secondsInt + minutesInt * 60)) * 100));
 
-        //if (isRunning)
-        //{
-        //    timerMinutes.text = (minutesInt < 10) ? "0" + minutesInt : minutesInt.ToString();
-        //    timerSeconds.text = (secondsInt < 10) ? "0" + secondsInt : secondsInt.ToString();
-        //    timerSeconds100.text = (seconds100Int < 10) ? "0" + seconds100Int : seconds100Int.ToString();
-        //}
+        if (isRunning)
+        {
+            //timerMinutes.text = (minutesInt < 10) ? "0" + minutesInt : minutesInt.ToString();
+            //timerSeconds.text = (secondsInt < 10) ? "0" + secondsInt : secondsInt.ToString();
+            //timerSeconds100.text = (seconds100Int < 10) ? "0" + seconds100Int : seconds100Int.ToString();
+        }
     }
 }
