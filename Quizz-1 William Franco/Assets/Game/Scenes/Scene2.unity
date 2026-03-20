@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 109173186}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5647,6 +5647,7 @@ GameObject:
   - component: {fileID: 872000692}
   - component: {fileID: 872000697}
   - component: {fileID: 872000696}
+  - component: {fileID: 872000698}
   m_Layer: 0
   m_Name: john_idle_0
   m_TagString: Untagged
@@ -5850,7 +5851,19 @@ MonoBehaviour:
     m_ActionId: 27c5f898-bc57-4ee1-8800-db469aca5fe3
     m_ActionName: 'Player/Crouch[/Keyboard/c]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 872000697}
+        m_TargetAssemblyTypeName: MovePlayer, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f1ba0d36-48eb-4cd5-b651-1c94a6531f70
     m_ActionName: 'Player/Jump[/Keyboard/space]'
   - m_PersistentCalls:
@@ -5923,6 +5936,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovePlayer
   speed: 5
+  jumpForce: 4
+  animator: {fileID: 872000698}
+--- !u!95 &872000698
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872000691}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 333a3af770cf7bd42b6f76411b4c14c3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &887517691
 GameObject:
   m_ObjectHideFlags: 0
@@ -8907,16 +8944,28 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TimerStart
       objectReference: {fileID: 0}
+    - target: {fileID: 1609302717456428163, guid: f87489b7b9f079241b8a120286039376, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1933190034118801491, guid: f87489b7b9f079241b8a120286039376, type: 3}
       propertyPath: m_text
       value: Load Scene3
       objectReference: {fileID: 0}
     - target: {fileID: 1933190034118801491, guid: f87489b7b9f079241b8a120286039376, type: 3}
       propertyPath: m_fontSize
-      value: 66.4
+      value: 60.1
       objectReference: {fileID: 0}
     - target: {fileID: 2119969397554041321, guid: f87489b7b9f079241b8a120286039376, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542605726291941504, guid: f87489b7b9f079241b8a120286039376, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542605726291941504, guid: f87489b7b9f079241b8a120286039376, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2665443949762932463, guid: f87489b7b9f079241b8a120286039376, type: 3}
@@ -9003,13 +9052,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5354657871103645336, guid: f87489b7b9f079241b8a120286039376, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5354657871103645336, guid: f87489b7b9f079241b8a120286039376, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5354657871103645336, guid: f87489b7b9f079241b8a120286039376, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 600
+      objectReference: {fileID: 0}
     - target: {fileID: 5409292331445981982, guid: f87489b7b9f079241b8a120286039376, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6403102742027377496, guid: f87489b7b9f079241b8a120286039376, type: 3}
+      propertyPath: m_fontSize
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403102742027377496, guid: f87489b7b9f079241b8a120286039376, type: 3}
+      propertyPath: m_margin.z
+      value: 3.9593506
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403102742027377496, guid: f87489b7b9f079241b8a120286039376, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7630397801688995285, guid: f87489b7b9f079241b8a120286039376, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680886408964278048, guid: f87489b7b9f079241b8a120286039376, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8038628029378987164, guid: f87489b7b9f079241b8a120286039376, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -9074,6 +9151,22 @@ PrefabInstance:
     - target: {fileID: 8130079449894282856, guid: f87489b7b9f079241b8a120286039376, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.0020141602
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656145090309046582, guid: f87489b7b9f079241b8a120286039376, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 264.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656145090309046582, guid: f87489b7b9f079241b8a120286039376, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 98.0205
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656145090309046582, guid: f87489b7b9f079241b8a120286039376, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 827.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656145090309046582, guid: f87489b7b9f079241b8a120286039376, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.9897
       objectReference: {fileID: 0}
     - target: {fileID: 8943107125311666689, guid: f87489b7b9f079241b8a120286039376, type: 3}
       propertyPath: m_SizeDelta.x
