@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
-    public static GameManager Instance;
+    public static GameManager Instance { get; private set; }
 
     private float globalTime;
 
@@ -12,32 +11,17 @@ public class GameManager : MonoBehaviour
     private int totalKiwi = 0;
     private int totalBanana = 0;
 
-
-
     void Awake()
     {
-        
-        if(Instance != null && Instance != this)
+        if (Instance == null)
         {
-            Destroy(gameObject);
-            return;
-        }
-            
             Instance = this;
             DontDestroyOnLoad(gameObject);
-          
-    }
-
-
-    void Start()
-    {
-        globalTime = 0;
-    }
-
-  
-    void Update()
-    {
-        
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void TotalTime(float timeScene)
@@ -63,9 +47,10 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
-    public float GlobalTime { get => globalTime; set => globalTime = value; }
-    public int TotalApple { get => totalApple; set => totalApple = value; }
-    public int TotalOrange { get => totalOrange; set => totalOrange = value; }
-    public int TotalKiwi { get => totalKiwi; set => totalKiwi = value; }
-    public int TotalBanana { get => totalBanana; set => totalBanana = value; }
+
+    public float GlobalTime => globalTime;
+    public int TotalApple => totalApple;
+    public int TotalOrange => totalOrange;
+    public int TotalKiwi => totalKiwi;
+    public int TotalBanana => totalBanana;
 }

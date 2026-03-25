@@ -119,6 +119,58 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &21200561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 21200563}
+  - component: {fileID: 21200562}
+  m_Layer: 0
+  m_Name: Spawner item
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &21200562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21200561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8871526f3b5255441acbfc2d60333923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spawner
+  applePrefab: {fileID: 1199829169}
+  orangePrefab: {fileID: 1972078252}
+  appleAmount: 3
+  orangeAmount: 2
+  spawnRadius: 0.5
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 1
+--- !u!4 &21200563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21200561}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 363.77002, y: 179.4368, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &71254519
 GameObject:
   m_ObjectHideFlags: 0
@@ -5132,7 +5184,7 @@ GameObject:
   - component: {fileID: 352411994}
   - component: {fileID: 352411993}
   m_Layer: 0
-  m_Name: ---Loader---
+  m_Name: Loader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7128,6 +7180,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1199829169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2837218001327442732, guid: 26d591c87e48a63408ef7899f36dcaaf, type: 3}
+  m_PrefabInstance: {fileID: 1918027635}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1226243582
 GameObject:
   m_ObjectHideFlags: 0
@@ -8218,7 +8275,7 @@ GameObject:
   - component: {fileID: 1567684785}
   - component: {fileID: 1567684784}
   m_Layer: 0
-  m_Name: ---Timer---
+  m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8248,6 +8305,50 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 639.1803, y: 205.09697, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1589006077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1589006079}
+  - component: {fileID: 1589006078}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1589006078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589006077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04006b916d4a8dd4383aa17ce209e9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+--- !u!4 &1589006079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589006077}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 363.77002, y: 179.4368, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9818,7 +9919,7 @@ GameObject:
   - component: {fileID: 1954296072}
   - component: {fileID: 1954296071}
   m_Layer: 0
-  m_Name: ---ScriptAudio---
+  m_Name: ScriptAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9862,6 +9963,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1972078252 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3489658616724259114, guid: 809fcde0cc2a9fb48b4777ac8464898b, type: 3}
+  m_PrefabInstance: {fileID: 462619969}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1976438720
 GameObject:
   m_ObjectHideFlags: 0
@@ -10039,7 +10145,7 @@ GameObject:
   - component: {fileID: 2045896476}
   - component: {fileID: 2045896475}
   m_Layer: 0
-  m_Name: ---ControlleScene2
+  m_Name: ControllerScene2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10564,3 +10670,5 @@ SceneRoots:
   - {fileID: 1595342897}
   - {fileID: 717339555}
   - {fileID: 462619969}
+  - {fileID: 1589006079}
+  - {fileID: 21200563}
