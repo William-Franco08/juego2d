@@ -2,13 +2,17 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject applePrefab;
-    public GameObject orangePrefab;
+    public GameObject apple;
+    public GameObject orange;
+    public GameObject kiwi;
+    public GameObject banana;
 
-    public int appleAmount = 3;
-    public int orangeAmount = 2;
+    private int appleAmount = 3;
+    private int orangeAmount = 2;
+    private int kiwiAmount = 5;
+    private int bananaAmount = 1;
 
-    public float spawnRadius = 0.5f;
+    public float spawnRadius = 1f;
     public LayerMask obstacleLayer;  
     void Start()
     {
@@ -19,13 +23,24 @@ public class Spawner : MonoBehaviour
     {
         for (int i = 0; i < appleAmount; i++)
         {
-            Instantiate(applePrefab, GetValidPosition(), Quaternion.identity);
+            Instantiate(apple, GetValidPosition(), Quaternion.identity);
         }
 
         for (int i = 0; i < orangeAmount; i++)
         {
-            Instantiate(orangePrefab, GetValidPosition(), Quaternion.identity);
+            Instantiate(orange, GetValidPosition(), Quaternion.identity);
         }
+
+        for (int i = 0; i < kiwiAmount; i++)
+        {
+            Instantiate(kiwi, GetValidPosition(), Quaternion.identity);
+        }
+
+        for (int i = 0; i < bananaAmount; i++)
+        {
+            Instantiate(banana, GetValidPosition(), Quaternion.identity);
+        }
+
     }
 
     Vector3 GetValidPosition()
