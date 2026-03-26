@@ -1,30 +1,34 @@
-using System;
+using UnityEngine;
+using static GameManager;
+
 using UnityEngine;
 
-public class ItemRecolectable : MonoBehaviour
+public class ItemRecolectable2 : MonoBehaviour
 {
+    [SerializeField] private string nombreItem;
 
-    [SerializeField] private ItemData _itemData;
+    private Coleccionable data;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        data = GameManager.Instance.GetColeccionable(nombreItem);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            GameManager.Instance.TotalItem(_itemData);
-            SimpleAudio.Instance.Sonidos(_itemData);
-            Debug.Log($"Recolectaste un {_itemData.itemType}" + " El valor de item "+_itemData.itemValue);
+            if (data != null)
+            {
+                Debug.Log($"Recolectaste {data.nombre} | Valor: {data.valor} | Rareza: {data.rareza}");
+
+                // Si quieres seguir usando tu sistema viejo:
+                ItemData temp = new ItemData();
+                temp.itemValue = data.valor;
+
+                GameManager.Instance.TotalItem(temp);
+            }
+
             Destroy(gameObject);
         }
     }

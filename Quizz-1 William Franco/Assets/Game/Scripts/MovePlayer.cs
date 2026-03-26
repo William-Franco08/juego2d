@@ -30,7 +30,7 @@ public class MovePlayer : MonoBehaviour
     {
         if (context.performed && isGrounded)
         {
-            Debug.Log("no esta tocando piso");
+            
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             isGrounded = false;
         }
@@ -60,7 +60,7 @@ public class MovePlayer : MonoBehaviour
             {
                 if (contact.normal.y > 0.5f)
                 {
-                    Debug.Log("toco piso");
+
                     isGrounded = true;
                 }
             }
@@ -71,7 +71,6 @@ public class MovePlayer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            Debug.Log("esta tocando piso");
             isGrounded = true;
         }
     }

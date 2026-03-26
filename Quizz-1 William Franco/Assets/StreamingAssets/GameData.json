@@ -1,0 +1,74 @@
+{
+  "colleccionables": [
+    {
+      "nombre": "Manzana",
+      "rareza": "Comun",
+      "valor":5,
+      "icono": "Apple_0"
+    },
+    {
+      "nombre": "Orange",
+      "rareza": "Raro",
+      "valor":10,
+      "icono": "Orange_0"
+    },
+    {
+      "nombre": "kiwi",
+      "rareza": "Raro",
+      "valor":15,
+      "icono": "kiwi_0"
+    },
+    {
+      "nombre": "Banana",
+      "rareza": "Legendario",
+      "valor":50,
+      "icono": "Bananas_0"
+    },
+    {
+      "nombre": "Cereza",
+      "rareza": "Comun",
+      "valor":7,
+      "icono": "Cherries_0"
+    },
+    {
+      "nombre": "Pinha",
+      "rareza": "Legendario",
+      "valor":50,
+      "icono": "Pineapple_0"
+    },
+    {
+      "nombre": "Melon",
+      "rareza": "Raro",
+      "valor":12,
+      "icono": "Melon_0"
+    },
+    {
+      "nombre": "Fresa",
+      "rareza": "UltraRaro",
+      "valor":30,
+      "icono": "Strawberry_0"
+    }
+  ],
+  "misiones":[
+    {
+      "id":1,
+      "titulo":"Una pequeña manzana para el hombre una gran manzana para la humanidad",
+      "descripcion":"obten 5 manzanas"
+    },
+        {
+      "id":2,
+      "titulo":"Ensalada de frutas",
+      "descripcion":"obten al menos una fruta de cada tipo"
+    },
+    {
+      "id":3,
+      "titulo":"¿Quien vive en una pinha debajo del mar?",
+      "descripcion":"obten una pinha"
+    },
+    {
+      "id":4,
+      "titulo":"BANANAAAAA",
+      "descripcion":"obten 5 manzanas"
+    }
+  ]
+}
